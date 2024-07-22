@@ -1,0 +1,34 @@
+extends layout 
+
+block content
+    div(class='main-container')
+        div(class='first-container')
+            h1 Welcome to Members Only 
+
+            if membership
+                h3 You are logged in as #{membership.username}
+                a.button(href='/hub/message' class='submitButton') Add a message
+                a.button(href='/hub/log-out' class='logoutButton') Log Out
+            else
+                h3 You need to have an account to post a message.
+                div(class='switch-form')
+                    a.button(href='/hub/sign-up' class='submitButton') Sign Up
+                    h3 or
+                    a.button(href='/hub/log-in' class='submitButton') Log In 
+        
+        div(class='second-container')
+            div(class='mainMessageContainer')
+                if messages 
+                    if membership && membership.membership
+                        each message in messages 
+                            div(class='messageContainer')
+                                h3 #{message.title}
+                                p #{message.text}
+                                p #[strong #{message.user.fullName}] - #{message.formattedDate}
+                    else
+                        each message in messages 
+                            div(class='messageContainer')
+                                h3 #{message.title}
+                                p #{message.text}
+                else
+                    h3 No messages yet!

@@ -1,0 +1,132 @@
+body {
+  background-color: #00132e;
+  color: white;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header img{
+  height: 10rem;
+}
+
+.main-container{
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr 0.2fr;
+  padding-top: 1rem;
+
+}
+
+.first-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: 2;
+  background-color: white;
+  color: #00132e;
+  padding: 1rem;
+  border-radius: 0.75rem 0 0 0.75rem;
+  gap: 0.25rem;
+}
+
+.second-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-column: 3;
+  background-color: white;
+  color: #00132e;
+  padding: 1rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.logoutButton{
+  background-color: darkred;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+.mainMessageContainer{
+  background-color: #00132e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 40rem;
+}
+
+.messageContainer{
+  background-color: white;
+  color: #00132e;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.messageContainer h3, .messageContainer p{
+  margin: 0;
+  padding: 0.25rem;
+  text-transform: capitalize;
+}
+
+.grid-container{
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+}
+
+.container{
+  grid-column: 2;
+  display: flex;
+  background-color: white;
+  color: #00132e;
+  flex-direction: column;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.container h1{
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.user-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-top: 1rem;
+}
+
+.switch-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+a{
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: bolder;
+  color: darkblue;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.submitButton{
+  background-color: #00132e;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem;
+}

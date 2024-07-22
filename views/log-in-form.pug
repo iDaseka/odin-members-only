@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    div(class='grid-container')
+        div(class='container')
+            h1(class='switch-form') Log In
+            form(method='POST')
+                div.form-group(class='user-form')
+                    label(for='email') Email
+                    input#email.form-control(type='email', name='email' required)
+                    label(for='password') Password
+                    input#password.form-control(type='password', name='password' required)
+                    button.btn.btn-primary(type='submit' class='submitButton') Log In
+                div(class='switch-form')
+                    p Don't have an account?
+                    a.button(href='/hub/sign-up' class='submitButton') Sign Up
+    
+    if errors
+        ul
+            for error in errors
+                li!= error.msg
